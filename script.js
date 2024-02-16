@@ -303,7 +303,7 @@ ScrollTrigger.create({
 document.addEventListener('DOMContentLoaded',() =>{
     setTimeout(() => {
       upword();
-      }, 3000);
+      }, 10000);
       function upword(){
         document.querySelector('#main').style.height = 'auto';
         gsap.to('.loader',{
