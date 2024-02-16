@@ -144,7 +144,7 @@ html,body{
 
 #page1{
     width: 100vw;
-    height: 300vh;
+    height: 400vh;
     position: relative;
 }
 
@@ -247,7 +247,7 @@ canvas{
 #page2 #back{
     position: absolute;
     top: 50%;
-    left: 22%;
+    left: 25%;
     font-weight: 800;
     line-height: 100px;
     color: rgba(253, 192, 13,1);
@@ -385,21 +385,21 @@ canvas{
 }
 #info1{
     top: 15%;
-    left: 3%;
+    left: 5%;
 }
 
 #info3{
-    top: 60%;
+    top: 50%;
     left: 10%;
 }
 
 #info2{
     top: 15%;
-    right: 3%;
+    right: 5%;
 }
 
 #info4{
-    top: 60%;
+    top: 50%;
     right: 10%;
 }
 
@@ -423,8 +423,8 @@ canvas{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width:40vw;
-    height: 60vh;
+    width:600px;
+    height: 400px;
     padding: 0 70px;
     text-align: start;
     border-radius: 8px;
