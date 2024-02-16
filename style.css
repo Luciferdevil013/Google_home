@@ -483,3 +483,60 @@ canvas{
     text-transform: uppercase;
     cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+
+    #nav a{
+        display: none;
+    }
+
+    #nav button{
+        display: none;
+    }
+    #page2{
+        width: 100%;
+        height: 250vh;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    #page2 img{
+        height: 500px;
+    }
+
+    #page2 #data{
+        margin-top: 80vh;
+    }
+
+    #page2 #back{
+        top: 80%;
+        left: 0;
+        font-size: 170px;
+    }
+    #info1{
+        top: 5%;
+        left: 20%;
+    }
+    
+    #info3{
+        top: 20%;
+        left: 20%;
+    }
+    
+    #info2{
+        top: 35%;
+        left: 20%;
+    }
+    
+    #info4{
+        top: 50%;
+        left: 20%;
+    }
+    #page3{
+        height: 150vh;
+    }
+
+    #page3 #content{
+        top: 75%;
+        left: 0%;
+        width: 100%;
+    }
+  }
