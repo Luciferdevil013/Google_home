@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loco.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Google</title>
+</head>
+<body>
+    
+
+    <div id="nav">
+        <a href="#">About</a>
+        <a href="#">shop</a>
+        <img src="./assets/logos_google-home.svg" alt="">
+        <a href="#">support</a>
+        <button>buy</button>
+    </div>
+    <div class="loader">
+        <svg class="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
+                    <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                    <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                </linearGradient>
+                <linearGradient id="pl-grad2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                    <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                </linearGradient>
+            </defs>
+            <circle class="pl__ring" cx="100" cy="100" r="82" fill="none" stroke="url(#pl-grad1)" stroke-width="36" stroke-dasharray="0 257 1 257" stroke-dashoffset="0.01" stroke-linecap="round" transform="rotate(-90,100,100)" />
+            <line class="pl__ball" stroke="url(#pl-grad2)" x1="100" y1="18" x2="100.01" y2="182" stroke-width="36" stroke-dasharray="1 165" stroke-linecap="round" />
+        </svg>
+    </div>
+    <div id="main">
+        <div id="page1">
+            <canvas></canvas>
+        </div>
+        <div id="page2">
+            <h1 id="back">Google</h1>
+            <h1>Just start with <span>"Ok Google"</span></h1>
+            <img src="./assets/logo.png" id='move' alt="">
+            <div class="info" id="info1">
+                <img src="./assets/Vector.svg" alt="">
+                <h1>Task Reminder</h1>
+                <h4>Ut ligula nisi, scelerisque nec varius vitae, ultricies ac libero. Donec non cursus orci.</h4>
+            </div>
+            <div class="info" id="info2">
+                <img src="./assets/Vector (1).svg" alt="">
+                <h1>Device Control</h1>
+                <h4>Ut ligula nisi, scelerisque nec varius vitae, ultricies ac libero. Donec non cursus orci.</h4>
+            </div>
+            <div class="info" id="info3">
+                <img src="./assets/car.svg" alt="">
+                <h1>Booking Car</h1>
+                <h4>Ut ligula nisi, scelerisque nec varius vitae, ultricies ac libero. Donec non cursus orci.</h4>
+            </div>
+            <div class="info" id="info4">
+                <img src="./assets/Group (copy 1).svg" alt="">
+                <h1>Ordering Dinner</h1>
+                <h4>Ut ligula nisi, scelerisque nec varius vitae, ultricies ac libero. Donec non cursus orci.</h4>
+            </div>
+        </div>
+        <div id="page3">
+            <div id="content">
+                <h4>Ready to get your</h4>
+                <h1>Google<br>Home</h1>
+                <button><img src="./assets/Group.svg"> Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

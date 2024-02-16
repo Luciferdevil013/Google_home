@@ -1,0 +1,485 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
+.loader{
+    position: fixed;
+    z-index: 999;
+    background: var(--bg);
+    color: var(--fg);
+    font: 1em/1.5 sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+}
+
+.pl {
+	display: block;
+	width: 6.25em;
+	height: 6.25em;
+}
+.pl__ring, .pl__ball {
+	-webkit-animation: ring 2s ease-out infinite;
+	        animation: ring 2s ease-out infinite;
+}
+.pl__ball {
+	-webkit-animation-name: ball;
+	        animation-name: ball;
+}
+
+/* Dark theme  */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+}
+
+/* Animation */
+@-webkit-keyframes ring {
+	from {
+		stroke-dasharray: 0 257 0 0 1 0 0 258;
+	}
+	25% {
+		stroke-dasharray: 0 0 0 0 257 0 258 0;
+	}
+	50%, to {
+		stroke-dasharray: 0 0 0 0 0 515 0 0;
+	}
+}
+@keyframes ring {
+	from {
+		stroke-dasharray: 0 257 0 0 1 0 0 258;
+	}
+	25% {
+		stroke-dasharray: 0 0 0 0 257 0 258 0;
+	}
+	50%, to {
+		stroke-dasharray: 0 0 0 0 0 515 0 0;
+	}
+}
+@-webkit-keyframes ball {
+	from, 50% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: 1;
+	}
+	64% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: -109;
+	}
+	78% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: -145;
+	}
+	92% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: -157;
+	}
+	57%, 71%, 85%, 99%, to {
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
+		stroke-dashoffset: -163;
+	}
+}
+@keyframes ball {
+	from, 50% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: 1;
+	}
+	64% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: -109;
+	}
+	78% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: -145;
+	}
+	92% {
+		-webkit-animation-timing-function: ease-in;
+		        animation-timing-function: ease-in;
+		stroke-dashoffset: -157;
+	}
+	57%, 71%, 85%, 99%, to {
+		-webkit-animation-timing-function: ease-out;
+		        animation-timing-function: ease-out;
+		stroke-dashoffset: -163;
+	}
+}
+
+#main{
+    width: 100%;
+    position: relative;
+}
+
+#page1{
+    width: 100vw;
+    height: 300vh;
+    position: relative;
+}
+
+#nav{
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 100px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+}
+
+#nav a{
+    color: #FFF;
+    text-align: center;
+    font-family: Mukta;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+}
+#nav img{
+    cursor: pointer;
+}
+#nav button{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 150px;
+    padding: 12px 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #EC5043;
+    -webkit-box-shadow: 0px 4px 25px 0px rgba(236, 80, 67, 0.50);
+            box-shadow: 0px 4px 25px 0px rgba(236, 80, 67, 0.50);
+    -webkit-backdrop-filter: blur(2.5px);
+            backdrop-filter: blur(2.5px);
+    color: #FFF;
+    text-align: center;
+    font-family: Mukta;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+canvas{
+    max-width: 100vw;
+    max-height: 100vh;
+    position: fixed;
+}
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    background: #121422;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+#page2 #back{
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    font-weight: 800;
+    line-height: 100px;
+    color: rgba(253, 192, 13,1);
+    font-size: 250px;
+}
+
+#page2 h1{
+    color: #FFF;
+    text-align: center;
+    font-family: Mukta;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+#page2 h1 span{
+    color: #FDC00D;
+    font-family: Mukta;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 60px;
+}
+
+#page2 img{
+    height: 70%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    z-index: 10;
+}
+
+.info{
+    position: absolute;
+    top: 10%;
+    /* left: 10%; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 326px;
+    height: 200px;
+    padding: 2vh;
+    flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 10px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+}
+.info h4{
+    color: #FFF;
+    font-family: Mukta;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+}
+#info1 img{
+    width: 30px;
+    height: 40px;
+}
+
+#info2 img{
+    width: 30px;
+    height: 40px;
+}
+
+#info3 img{
+    width: 30px;
+    height: 40px;
+}
+
+#info4 img{
+    width: 30px;
+    height: 40px;
+}
+#info1 h1{
+    color: #FFF;
+    font-family: Mukta;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+#info2 h1{
+    color: #FFF;
+    font-family: Mukta;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    padding: 0;
+    margin: 0;
+}
+#info3 h1{
+    color: #FFF;
+    font-family: Mukta;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    padding: 0;
+    margin: 0;
+}
+#info4 h1{
+    color: #FFF;
+    font-family: Mukta;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px;
+    padding: 0;
+    margin: 0;
+}
+#info1{
+    top: 15%;
+    left: 3%;
+}
+
+#info3{
+    top: 60%;
+    left: 10%;
+}
+
+#info2{
+    top: 15%;
+    right: 3%;
+}
+
+#info4{
+    top: 60%;
+    right: 10%;
+}
+
+#page3{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#page3 #content{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width:40vw;
+    height: 60vh;
+    padding: 0 70px;
+    text-align: start;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.70);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+}
+
+#page3 #content h4{
+    color: #121422;
+    font-family: Mukta;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100px; /* 250% */
+}
+
+#page3 #content h1{
+    color: #4586F7;
+    font-family: Mukta;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90px;
+}
+
+#page3 #content button{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 250px;
+    gap:5px;
+    padding: 18px 35px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 8px;
+    background: rgba(253, 192, 13, 0.80);
+    -webkit-box-shadow: 0px 4px 25px 0px rgba(253, 192, 13, 0.50);
+            box-shadow: 0px 4px 25px 0px rgba(253, 192, 13, 0.50);
+    -webkit-backdrop-filter: blur(2.5px);
+            backdrop-filter: blur(2.5px);
+    outline: none;
+    border: none;
+    color: #121422;
+    text-align: center;
+    font-family: Mukta;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 10vh;
+    text-transform: uppercase;
+    cursor: pointer;
+}
