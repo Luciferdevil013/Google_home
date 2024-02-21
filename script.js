@@ -256,7 +256,7 @@ gsap.to(imageSeq, {
     scrub: 0.15,
     trigger: `#page1>canvas`,
     start: `top top`,
-    end: `400% bottom`,
+    end: `600% bottom`,
     scroller: `#main`,
   },
   onUpdate: render,
@@ -297,7 +297,7 @@ ScrollTrigger.create({
     pin: true,
     scroller: `#main`,
     start: `top top`,
-    end: `400% bottom`,
+    end: `600% bottom`,
   });
 
 document.addEventListener('DOMContentLoaded',() =>{
