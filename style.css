@@ -265,7 +265,7 @@ canvas{
 #circle1{
     position: absolute;
     top: -10%;
-    left: 5;
+    left: 5%;
     width: 90%;
     height: 130%;
     flex-shrink: 0;
